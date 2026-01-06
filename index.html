@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevPortfolio | Front-End Developer</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+/>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ecec",
+            "background-light": "#f6f8f8",
+            "background-dark": "#102222",
+            "section-alt-dark": "#0d1b1b",
+            "section-cyan-dark": "#0a1616",
+            "card-dark": "#152020",
+            "border-dark": "#283939",
+                              "surface-dark": "#1A2626",
+                        "border-dark": "#283939",
+                        "silver": "#9db9b9"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          animation: {
+            'bounce-slow': 'bounce 3s infinite',
+            'marquee': 'marquee 40s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(to right, #ffffff, #13ecec);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-dark {
+      background: linear-gradient(to right, #334155, #0d9488);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #102222;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #283939;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #13ecec;
+    }
+    .pause-on-hover:hover .animate-marquee {
+      animation-play-state: paused;
+    }
+    .mask-fade {
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .brand-logo{
+      height: 5rem;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-background-dark">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const redirect = params.get("redirect");
+    if (redirect) {
+      window.history.replaceState(null, "", redirect);
+    }
+  })();
+</script>
+
+</body>
+</html>
